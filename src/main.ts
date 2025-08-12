@@ -26,7 +26,7 @@ async function searchForBook(page: Page, bookName: string) {
 async function main() {
   let browser: Browser | null = null;
   try {
-    browser = await chromium.launch({ headless: true });
+    browser = await chromium.launch({ headless: false });
     const page = await browser.newPage();
 
     console.log(`Navigating to ${E_VRIT_URL}...`);
